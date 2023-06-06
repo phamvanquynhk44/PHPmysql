@@ -1,0 +1,14 @@
+{
+    "name":"phamvanquynh/may-tinh-lap-top-linh-kien-may-tinh",
+    "type": "phamvanquynh2120030166",
+    "description": "Bán máy tính Laptop và linh kiện máy tính",
+    "autoload": {
+        "psr-4":{
+            "App\\":"app/"
+        }
+    },
+    "require":{
+        "illuminate/events": "^10.1",
+        "illuminate/database": "^10.1"
+    }
+}
