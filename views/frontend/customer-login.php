@@ -27,55 +27,26 @@
 .closebtn:hover {
   color: black;
 }
+
+.alert-success {
+  background-color: #008eff;
+}
+.close{
+  display: none;
+}
 </style>
   <?php require_once('./views/frontend/header.php'); ?> 
   <?php require_once('./views/frontend/mod-mainmenu.php'); ?>
 
-<?php
-use App\Models\User;
-if(isset($_POST['DANGNHAP']))
-{
-    $message_alert="";
-    $username=$_POST['username'];
-    $password= sha1($_POST['password']);
-    $args=null;
-    if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
-        $args=[
-            ['email','=',$username],
-            ['password','=',$password],
-            ['status','=',1],
-        ];    
-      }else{
-        $args=[
-            ['username','=',$username],
-            ['password','=',$password],
-            ['status','=',1],
-        ]; 
-      }
-    $user=User::where($args)->first();
-    if($user!=null){
-        
-        if($user->password==$password){
-            $_SESSION['logincustomer']=$user->name;
-            $_SESSION['user_id']=$user->id;
-            $_SESSION['message_alert']=null;
-            $message_alert="Đăng nhập thành công";
-        }   
-    }
-    else{
-        $message_alert="Tài khoản không chính xác";
-    }
-   
-}
-?>
 
 
 
   <!-- ĐĂNG NHẬP -->
   <div id="login">
+  <?php require_once('./views/frontend/message.php');?>
             <h1>Đăng nhập khách hàng</h1>
             <?php if(!isset($_SESSION['logincustomer'])):?>
-                <form action="index.php?option=custumer&f=login" method="POST">
+                <form action="index.php?option=custumer&f=processLogin" method="POST">
                     <div class="f-e">
                         <span><i class="fa fa-envelope"></i></span>
                         <input type="text" name="username" placeholder="Tên đăng nhập hoặc Email" required>

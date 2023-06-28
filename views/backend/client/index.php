@@ -63,10 +63,8 @@
 
     <td><?=$item['created_at'];?></td>
     <td>
-    <?php if($item->roles==2):?>
-        Admin
-        <?php else:?>
-          Nhân viên
+    <?php if($item->roles==0):?>
+      Khách hàng
           <?php endif;?>
     </td>
     <td class="function"> 

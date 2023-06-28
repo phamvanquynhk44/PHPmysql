@@ -159,16 +159,18 @@
            </div>
 
              <div id="home-page1">
-              <a href="index.html"><img src="./public/img/logo/logo-icon-01.png"></a>
+              <a href="index.php"><img src="./public/img/logo/logo-icon-01.png"></a>
            </div>
 
            <div id="home-page">
             <a href="index.php"><img src="./public/img/logo/logo.svg" title="GEARVN PC HIGH-END &amp; GAMING GEAR" alt="ẢNH TRANG CHỦ"></a>
          </div>
 
-             <div id="search">
-                <input type="search" placeholder="Nhập mã hoặc tên sản phẩm"  required>
-               <button><a href="#"><i class="fa fa-search"></i></a></button>
+              <form action="index.php?option=search" method="post">
+              <div id="search">
+                <input type="text" name="keyword" placeholder="Nhập mã hoặc tên sản phẩm"  required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
             </div>
 
             <div id="function">
