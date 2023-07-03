@@ -60,7 +60,7 @@
                     </div>
                 </form>
                 <div class="for">
-                    <a href="#">Quên mật khẩu?</a> hoặc <a href="index.php?option=custumer&f=register">Đăng ký</a>
+                    <a href="index.php?option=custumer&f=forgotPassword">Quên mật khẩu?</a> hoặc <a href="index.php?option=custumer&f=register">Đăng ký</a>
                 </div>
                 <?php else:?> 
                     <div class="alert info">

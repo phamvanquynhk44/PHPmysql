@@ -21,6 +21,14 @@ switch ($f){
         require_once("views/frontend/customer-processRegister.php");
         break;
     }
+    case 'forgotPassword': {
+        require_once("views/frontend/customer-forgotPassword.php");
+        break;
+    }
+    case 'processForgotPassword': {
+        require_once("views/frontend/customer-processForgotPassword.php");
+        break;
+    }
     case 'profile': {
         require_once("views/frontend/customer-profile.php");
         break;
